@@ -11,37 +11,37 @@ public class GestionUsuariosImpl implements GestionUsuarios {
 
     List<Usuario> usuarios;
 
-    public GestionUsuariosImpl(){
+    public GestionUsuariosImpl() {
         usuarios = new ArrayList<Usuario>();
     }
 
-    public String crearUsuario(Usuario usuario) {
-        if(getUsuario(usuario.getId())==null){
+    public String crearUsuario(final Usuario usuario) {
+        if (getUsuario(usuario.getId()) == null) {
             usuarios.add(usuario);
             return usuario.getId();
         }
         return null;
     }
 
-    public Boolean eliminarUsuario(String id) {
+    public Boolean eliminarUsuario(final String id) {
         final Usuario usuario = getUsuario(id);
-        if(usuario!=null){
+        if (usuario != null) {
             usuarios.remove(usuario);
             return true;
         }
         return false;
     }
 
-    public Usuario getUsuario(String id) {
-        for(final Usuario usuario : usuarios){
-            if(usuario.getId().equals(id)){
+    public Usuario getUsuario(final String id) {
+        for (final Usuario usuario : usuarios) {
+            if (usuario.getId().equals(id)) {
                 return usuario;
             }
         }
         return null;
     }
 
-    public List<Usuario> getListaUsuarios(){
+    public List<Usuario> getListaUsuarios() {
         return usuarios;
     }
 }

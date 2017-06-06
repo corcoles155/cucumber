@@ -5,10 +5,8 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
 import org.sanchez.corcoles.ana.pruebasconcepto.cucumber.GestionUsuarios;
 import org.sanchez.corcoles.ana.pruebasconcepto.cucumber.dto.Usuario;
-import org.sanchez.corcoles.ana.pruebasconcepto.cucumber.impl.GestionUsuariosImpl;
 
 import java.util.ArrayList;
 import java.util.List;
